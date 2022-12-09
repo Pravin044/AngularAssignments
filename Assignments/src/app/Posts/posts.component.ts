@@ -17,32 +17,32 @@ export class PostsComponent implements OnInit {
     this.postContentModel.push({
       image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
       title: "Test",
-      content: "hjahjdfjahsdfhjafsjd"
+      content: "This is initial post"
 
     })
 
     this.postCount = this.postContentModel.length.toString();
 
 
-   
+
   }
   ngOnInit(): void {
     const subscription = this.data.getValue();
     subscription.subscribe({
-     next:(data:IPostContent)=>{
-       this.UpLoadPost(data)
-     },
-     error:(error)=>{console.log(error);
-     }
-   })
+      next: (data: IPostContent) => {
+        this.UpLoadPost(data)
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
 
   }
 
   UpLoadPost(data: any) {
-    if(data!=undefined)
-    {
+    if (data != undefined) {
       this.postContentModel.push(data);
-    this.postCount=this.postContentModel.length.toString();
+      this.postCount = this.postContentModel.length.toString();
     }
 
   }

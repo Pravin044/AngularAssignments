@@ -9,13 +9,6 @@ import { DataService } from 'src/app/services/data.service';
 export class DisplayPostCountComponent {
 @Input()
 PostCount:string="0";
-constructor(private dataservice:DataService){
-  const data= dataservice.getValue();
-  data.subscribe({
-    next:(data)=>{console.log(data);
-    },
-    error:(error)=>{console.log(error);
-    }
-  })
+constructor(){
 }
 }
