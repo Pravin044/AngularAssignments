@@ -1,0 +1,7 @@
+<div>
+    <h2>Posts/Stories</h2>
+    <div *ngFor="let post of postContentModel">
+        <app-post-structure [Image]="post.image" [title]="post.title" [content]="post.content"></app-post-structure>
+        <mat-divider></mat-divider>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<div>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>New post</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+
+            <form ngForm (ngSubmit)="submit()">
+                <table>
+                    <tr>
+                        <td>
+                            Title:
+                        </td>
+                        <td>
+                            <input type="text" name="title" [(ngModel)]="title" #titleControl="ngModel">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Image:
+                        </td>
+                        <td>
+                            <input type="text" name="image" [(ngModel)]="image" #imageControl="ngModel">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Content:
+                        </td>
+                        <td>
+                            <textarea name="content" [(ngModel)]="content" #imageControl="ngModel" cols="30"
+                                rows="10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button mat-raised-button color="primary">Submit</button>
+                        </td>
+                        <td>
+                            <button mat-raised-button color="secondary" (click)="clear()">Clear</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </mat-card-content>
+    </mat-card>
+
+</div>
