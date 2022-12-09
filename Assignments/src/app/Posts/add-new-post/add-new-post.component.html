@@ -5,7 +5,7 @@
         </mat-card-header>
         <mat-card-content>
 
-            <form ngForm (ngSubmit)="submit()">
+            <form ngForm>
                 <table>
                     <tr>
                         <td>
@@ -34,7 +34,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <button mat-raised-button color="primary">Submit</button>
+                            <button mat-raised-button color="primary" (click)="submit()">Submit</button>
                         </td>
                         <td>
                             <button mat-raised-button color="secondary" (click)="clear()">Clear</button>
